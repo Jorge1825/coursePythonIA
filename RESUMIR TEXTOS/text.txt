@@ -1,0 +1,52 @@
+Los ordenadores trabajan con un método para representar los caracteres que se muestran en una web o en el servicio de correo que utilizamos a diario. Ese método se denomina Unicode, y funciona a través de los números.
+
+Si nos vamos al sitio oficial de Unicode, vemos que la definición oficial es la siguiente:
+
+Unicode es un estándar de codificación universal de caracteres. Este estándar de codificación proporciona la base para el procesamiento, almacenamiento e intercambio de datos de texto en cualquier idioma en todos los protocolos modernos de software y tecnología de la información.
+
+Para que lo entiendas con un ejemplo, cuando tu ordenador tiene que representar cualquier caracter, por ejemplo, cualquier letra del abecedario latino, lo que hace es buscar entre todos los caracteres que hay dentro del estándar Unicode y ver qué número tiene asignado.
+
+La letra latina minúscula “a” tiene:
+
+Número en Unicode: U+0061
+Código HTML: &#97
+Por lo tanto, cuando el ordenador tiene que representar la “a” del alfabeto latino, la busca entre todos los caracteres que tiene almacenados, identificándola por ese número que tiene asignado.
+
+Aquí puedes conseguir rápida y cómodamente el código de cualquier carácter Unicode.
+
+Unicode cubre todos los caracteres de todos los sistemas de escritura del mundo, modernos y antiguos. También incluye símbolos técnicos, signos de puntuación y muchos otros caracteres que se usan para escribir texto. Esto le permite satisfacer las necesidades de todo tipo de usuarios, ya sea en el mundo empresarial o académico.
+
+Y sí, incluso los emoji tienen sus propios códigos:
+
+Código Unicode en emojis
+Tipos de codificación
+Como te decíamos antes, Unicode define cada carácter o símbolo mediante un nombre e identificador numérico, el llamado punto de código. Cuando se ha asignado un código a un carácter, se dice que dicho carácter está codificado.
+
+Para que ese número o código sea entendido por el ordenador debe estar codificado. Las formas de codificación de Unicode reglamentan la forma en que los puntos de código se transformarán en unidades inteligibles por una máquina. Existen tres formas de codificación bajo el nombre UTF (Unicode Transformation Format):
+
+UTF-8: codificación orientada a byte con símbolos de longitud variable.
+UTF-16: codificación de 16 bits de longitud variable optimizada para la representación del plano básico multilingüe (BMP).
+UTF-32: codificación de 32 bits de longitud fija, y la más sencilla de las tres.
+Características de UTF-8
+UTF-8 permite codificar cualquiera de los más de 120.000 caracteres de Unicode y hacerlos accesibles para los ordenadores.
+
+Divide los caracteres Unicode en varios grupos, en función del número de bytes necesarios para codificarlos (de 1 a 4 bytes:)
+
+1 byte: afecta a los 128 caracteres incluidos en US-ASCII.
+2 bytes: incluye 1920 caracteres en total, entre los que se encuentran los caracteres romances, los signos diacríticos, y los alfabetos griego, hebreo, árabe, etc.
+3 bytes: están codificados con 3 bytes los caracteres del plano básico multilingüe de Unicode, incluyendo los caracteres del chino, japonés y coreano.
+4 bytes: incluye símbolos matemáticos y alfabetos clásicos para uso principalmente académico: lineal B, alfabeto persa, fenicio, etc.
+Aunque, como hemos visto, existen otras codificaciones distintas a UTF-8, esta es la más popular y la que más se utiliza, por lo que es más probable que tu navegador la entienda sin problema (su tasa de error es insignificante).
+
+¿Para qué necesitamos estándares como estos?
+Piensa en un correo electrónico o en un documento escrito en chino, o en alemán, o en ruso… Sin un sistema universal que facilitase la decodificación, un texto en cualquiera de estos idiomas se vería distinto desde un ordenador en España que desde otro situado en la otra punta del planeta. Si cada territorio tuviese sus propios sistemas de codificación, la comunicación internacional vía web resultaría imposible. Por eso se ha ideado un formato universal. 
+
+Una página en HTML solo puede trabajar con una codificación, no se pueden mezclar varias. UTF-8 es la más recomendada, por su capacidad para soportar muchos idiomas y signos.
+
+Por esta razón, es muy recomendable introducir la etiqueta <meta charset=”utf-8″>. Con ella ya informas al navegador de la codificación del set de caracteres que estás utilizando.
+
+Recuerda colocar esta etiqueta justo después del <head>. Así el navegador tendrá la información antes de empezar a procesarla, y sabrá que será más fácil navegar por tu contenido, sin encontrarse con incoherencias o contenidos que lleven a confusión.
+
+Por otra parte, también puedes configurar la codificación UTF-8 en la mayoría de los clientes de correo. Esto puede serte de ayuda si escribes habitualmente a contactos internacionales, cuyo cliente de correo no tiene que ser el mismo que el tuyo. En el apartado de Herramientas de tu correo te encontrarás con esta opción.
+
+Esperamos que este post te haya sido de ayuda para descubrir qué es y para qué sirve UTF-8. Te animamos a seguir navegando por el blog para aprender sobre el mundo del hosting y el sector web en general
